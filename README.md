@@ -1,20 +1,12 @@
-# Girlscript Developer Tech Camp -UI/UX challenge
-An online event that tests the capability of a person to replicate a given web/app UI,
-the event would be conducted on a weekly basis. The person who best replicates the UI
-on the web or the app wins the challenge. This challenge will run the whole month, with
-1-2 new UIs to be completed per week.
+# GirlScript Developer Tech Camp - Hack-in
+A week-long coding challenge in which participants build a small-scale project using latest technologies. They would be provided with all the required resources and reference materials along with the guidance of mentors.
+The goal of this event is to encourage community members to learn new technologies and evolve continuously in the tech industry.
 
-# Instructions:
-
-
-
-   1. Fork the repository and clone it to your PC.
-
-   2.  Put your code inside the cloned repository. in a folder with the name: `“<ParticipantName>:<DifficultyLevel>”` which should contain the source code and screenshots/screen captures.
-
-   3. Push it to your forked repository.
-
-   4. Create a Pull Request and we will take care of the rest.
+# Instructions
+1. Fork the repository and clone it to your PC.
+2. Put your code inside the cloned repository in a folder name "<Participant_Name>:<Project_Name>" which should contain the source code and screenshots of your developed project.
+3. Push it to your forked repository.
+4. Create Pull Request and we will take care of the rest.
 
 # Github Cheat Sheet:
 
