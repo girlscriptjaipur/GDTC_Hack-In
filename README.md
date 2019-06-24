@@ -4,7 +4,7 @@ The goal of this event is to encourage community members to learn new technologi
 
 # Instructions
 1. Fork the repository and clone it to your PC.
-2. Put your code inside the cloned repository in a folder name "<Participant_Name>:<Project_Name>" which should contain the source code and screenshots of your developed project.
+2. Put your code inside the cloned repository in a folder name `<Project ID> : <Participant Name>` which should contain the source code and screenshots of your developed project.
 3. Push it to your forked repository.
 4. Create Pull Request and we will take care of the rest.
 
