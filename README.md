@@ -1,7 +1,7 @@
 # GirlScript Developer Tech Camp - Hack-in
 A week-long coding challenge in which participants build a small-scale project using latest technologies. They would be provided with all the required resources and reference materials along with the guidance of mentors.
 The goal of this event is to encourage community members to learn new technologies and evolve continuously in the tech industry.
-
+[Check out Wiki Page for Project Details!](https://github.com/girlscriptjaipur/GDTC_Hack-In/wiki)
 # Instructions
 1. Fork the repository and clone it to your PC.
 2. Put your code inside the cloned repository in a folder name `<Project ID> : <Participant Name>` which should contain the source code and screenshots of your developed project.
