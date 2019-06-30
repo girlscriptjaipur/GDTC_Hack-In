@@ -10,8 +10,8 @@ This project is focussed on using LBPH (Local Binary Patterns Histogram) algorit
 6. Then we will finally be somewhat ready to create a face recognition algorithm.
 
 Python libraries/modules you will need:
-1.Numpy
-2.OpenCV (cv2)
-3.Pyttsx3 (if required in our project)
+1. Numpy
+2. OpenCV (cv2)
+3. Pyttsx3 (if required in our project)
 
 Note:- I will upload any necesary module as per requirement. Feel free to ask anything on gitter. Lets have fun coding and learning together.
