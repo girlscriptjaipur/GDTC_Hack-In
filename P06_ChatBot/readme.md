@@ -10,4 +10,4 @@ Day 3-4 Becoming Familiar with slack and its [APIs](https://get.slack.help/hc/en
 Rest of the days: Deploying chatbot to HEROKU.
 ### Prerequisites
 
-Nodejs, Slack web kit. Slack account
+Nodejs, Slack web kit. [Slack workspace link](https://gdtcp06.slack.com)
