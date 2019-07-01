@@ -1,5 +1,7 @@
 # Content Aggregator
 
+[![Gitter](https://badges.gitter.im/GDTC_Hack-In/P13.svg)](https://gitter.im/GDTC_Hack-In/P13?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ### What is Content Aggregation?
 “Content aggregation” means the act of collecting content (blogs,
 newsletters, news articles, social media posts, etc.) from various feeds to the
