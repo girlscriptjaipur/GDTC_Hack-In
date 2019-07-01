@@ -1,4 +1,4 @@
-## Content Aggregator
+# Content Aggregator
 
 ### What is a Content Aggregation?
 “Content aggregation” means the act of collecting content (blogs,
