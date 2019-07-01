@@ -1,0 +1,7 @@
+To create a time line you can add steps like:
+1) Face Detection 
+2) Face Recognition
+3) Study Trackers
+4) Working with Trackers
+5) Combining Trackers with Face Recognition
+6) Testing!
