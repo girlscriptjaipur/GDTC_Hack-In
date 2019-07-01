@@ -19,7 +19,7 @@ public class OtherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_other);
 
        if(getIntent()!=null){
-           ((TextView)(findViewById(R.id.tv_ans))).setText(getIntent().getStringExtra("ANS"));
+           ((TextView)(findViewById(R.id.tv_ans))).setText(getIntent().getStringExtra("ANS") + " cal/day");
 
        }
 

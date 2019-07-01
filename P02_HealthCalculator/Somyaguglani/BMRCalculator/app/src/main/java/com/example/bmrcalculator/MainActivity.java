@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 else if (TextUtils.isEmpty(height.getText().toString())) {
-                    height.setError("Enter weight");
+                    height.setError("Enter height");
                     return;
                 }
                 else if (TextUtils.isEmpty(weight.getText().toString())) {
