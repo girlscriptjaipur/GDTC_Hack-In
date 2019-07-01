@@ -29,3 +29,5 @@ Subgoals:
 - Give the player the option to play again.
 - Keep a record of the score
 
+
+Please join gitter chat room: https://gitter.im/GDTC_Hack-In/P11?utm_source=share-link&utm_medium=link&utm_campaign=share-link
