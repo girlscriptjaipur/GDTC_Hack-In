@@ -36,3 +36,4 @@ used by the trainees for their own personal projects.
 * https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 * https://likegeeks.com/python-sqlite3-tutorial/
 * https://www.tutorialspoint.com/flask/
+* https://github.com/gdsoumya/content_master (JUST FOR REFERENCE)
