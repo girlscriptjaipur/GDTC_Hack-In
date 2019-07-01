@@ -1,6 +1,6 @@
 # Content Aggregator
 
-### What is a Content Aggregation?
+### What is Content Aggregation?
 “Content aggregation” means the act of collecting content (blogs,
 newsletters, news articles, social media posts, etc.) from various feeds to the
 same place online. Aggregation can be done manually by people or
