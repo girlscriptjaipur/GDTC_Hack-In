@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/colorBG"
+    tools:context=".ActivityChoose">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbarChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/healthsteth"
+        android:layout_above="@id/llButtons"
+
+   />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+    android:layout_marginBottom="70dp"
+    android:id="@+id/llButtons"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="4"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/btnBMR"
+            android:text="BMR Calculator"
+            android:background="@drawable/backlayer"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+        <Button
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/btnBMI"
+            android:text="BMI Calculator"
+            android:background="@drawable/backlayer"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+    <Button
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/btnBFP"
+        android:text="BFP Calculator"
+        android:background="@drawable/backlayer"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+</LinearLayout>
+
+</RelativeLayout>
