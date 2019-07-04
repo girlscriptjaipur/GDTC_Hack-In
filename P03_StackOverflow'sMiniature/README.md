@@ -31,6 +31,14 @@ desktop</li>
      https://medium.com/code-to-express/starting-with-nodejs-b70679e8101f<br>https://medium.com/code-to-express/login-and-signup-page-4a65fec162f1
 
 
+## Day3
+So till now a User can SignUp and Login. Now the Next thing to is to make the Question Schema So that a User can Post a Question and also answer to that question. Along with this User can also Upvote the answer. So Please follow these steps:
+<ul>
+   <li>Make a Question Schema/Model(<i>Take help from Resources</i>)</li>
+   <li>Make a route(private route) to post the Question.</li>
+   <li>Make a get(public route) route to get all the Questions.</li>
+</ul>  
+
 # Resources 
 For the help Go into this repo Star and fork 
 https://github.com/HrithikMittal/Minature-Stackoverflow-APIs/
