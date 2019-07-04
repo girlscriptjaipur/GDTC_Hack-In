@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { HttpModule } from '@angular/http';
@@ -17,11 +17,12 @@ import {HttpErrorHandlerService} from './http-error-handler.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+   HttpClientModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [MessageService,HttpErrorHandlerService],
+  providers: [MessageService,HttpErrorHandlerService,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
