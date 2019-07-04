@@ -68,6 +68,13 @@ After Clicking the green button make sure it looks like [this](https://drive.goo
 
 * Statistics
     * [Repository for codes on Statistical Tools](https://github.com/iamchiragsharma/Statistica) If you like then star it and if you can make it better please fork and start working.
+    
+    
+    * **After First Half**
+        * [Intro to Variance, Covariance and Correlation](https://www.surveygizmo.com/resources/blog/variance-covariance-correlation/)
+        * [Correlation & Covariance](https://www.countbayesie.com/blog/2015/2/21/variance-co-variance-and-correlation)
+        * [Correlation Matrix & Covariance Matrix](https://towardsdatascience.com/let-us-understand-the-correlation-matrix-and-covariance-matrix-d42e6b643c22)
+        * [Ben Lambert Correlation & Covariance](https://www.youtube.com/watch?v=KDw3hC2YNFc)
 
 * Pandas
     * [Pandas CheatSheet](https://www.dataquest.io/blog/pandas-cheat-sheet/)
