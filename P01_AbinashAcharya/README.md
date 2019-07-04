@@ -16,11 +16,11 @@
 ------------
 Basic CRUD fucntionalities were used in building the backend using Node, Express and Mongodb.
 ## Dependencies
-1.body-parser
-2.cors
-3.mongoose
-4.express
-5.@angular/cli
+1. body-parser
+2. cors
+3. mongoose
+4. express
+5. @angular/cli
 ## Useful Commands 
 **The Server runs on localhost:3000 and Mogodb by default runs on localhost:27017 
 and the frontend application runs on port 4200 on being served.**
