@@ -11,7 +11,7 @@ This is the Project of Minature StackOverflow API which is an API's collection w
 # Tasks to be Done
 ## Day1
    Start with the installation
-<ol>
+<ul>
 <li>NodeJs ( https://nodejs.org/en/ )</li>
 <li>MongoDB ( https://www.mongodb.com/what-is-mongodb ) <br/>
 You can use the online Database ( Mongodb Atlas / m-lab) <br/>
@@ -19,14 +19,14 @@ For better UI/UX of database you can download ( mongoDB Atlas / Robo3T )</li>
 <li>For editor you can use any IDE. (my fav. - Visual Code)</li>
 <li>If you want the version control also then install git-bash or you can you Github
 desktop</li>
- </ol>
+ </ul>
  
  
  ## Day2
-   <ol> 
+   <ul> 
    <li>Setup Your Node-Js Project</li>
    <li>Make a SignUp and Login Routes for the user</li>
-   </ol>
+   </ul>
       Read this blogs to take help<br>
      https://medium.com/code-to-express/starting-with-nodejs-b70679e8101f<br>https://medium.com/code-to-express/login-and-signup-page-4a65fec162f1
 
