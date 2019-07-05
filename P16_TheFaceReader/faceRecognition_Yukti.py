@@ -32,7 +32,7 @@ def labels_for_training_data(directory):
                 continue
             faces_rect,gray_img=faceDetection(test_img)#Calling faceDetection function to return faces detected in particular image
             if len(faces_rect)!=1:
-               continue #Since we are assuming only single person images are being fed to classifier
+               continue
             (x,y,w,h)=faces_rect[0]
             roi_gray=gray_img[y:y+w,x:x+h]#cropping region of interest i.e. face area from grayscale image
             faces.append(roi_gray)
