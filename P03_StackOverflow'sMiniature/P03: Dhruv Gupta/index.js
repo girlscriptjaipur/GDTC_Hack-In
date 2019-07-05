@@ -97,6 +97,26 @@ app.post("/", isLoggedIn, (req, res) => {
     }
   );
 
+// PRIVATE ROUTE FOR SUBMITTING ANSWERS TO QUESTIONS
+app.post("/answers/:id", isLoggedIn, (req, res) => {
+      Question.findById(req.params.id)
+        .then(question => {
+          const newAnswer = {
+            user: req.user.id,
+            name: req.body.name,
+            text: req.body.text
+          };
+          question.answers.unshift(newAnswer);
+  
+          question
+            .save()
+            .then(question => res.json(question))
+            .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
+    }
+);
+
 // MIDDLEWARE
 function isLoggedIn(req,res,next){
     if(req.isAuthenticated()){
