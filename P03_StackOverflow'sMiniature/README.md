@@ -39,6 +39,14 @@ So till now a User can SignUp and Login. Now the Next thing to is to make the Qu
    <li>Make a get(public route) route to get all the Questions.</li>
 </ul>  
 
+## Day4
+So till now a User can Post a Question after they login into the System.So for further Development please follow these steps:
+<ul>
+   <li>Make a private route to post the Answer only for the existing Questions.</li>
+   <li>Make a public route to get all the Answers and it is better to get the complete Question Model.</li>
+   <li><i>It is just advice to make the array-String in Model/Schema if you want to have more than one value for same entity. For example we want to save many answers of only one question.</i></li>
+</ul>
+
 # Resources 
 For the help Go into this repo Star and fork 
 https://github.com/HrithikMittal/Minature-Stackoverflow-APIs/
