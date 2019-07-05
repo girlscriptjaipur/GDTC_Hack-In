@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBG"
+    tools:context=".MainActivity">
+  <!--  <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorWhite"
+        app:title="BMR Calculator"
+        android:background="@color/colorAccent"/>-->
+
+
+<EditText
+    android:inputType="number"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/edtWeight"
+    android:layout_margin="20dp"
+    android:hint="Enter your Weight (in KGs)"/>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="4"
+            android:text="Select your Gender"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <RadioGroup
+
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="2"
+            android:text="Select Age Group"
+            android:textColor="#000"
+            android:textSize="15sp" />
+        <Spinner
+            android:prompt="@string/age_prompt"
+            android:entries="@array/age_group_items"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:id="@+id/spAge"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:text="Calculate"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:id="@+id/txtBMR"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_margin="20dp"
+        android:text="@string/BMRtext"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/heart"/>
+</LinearLayout>

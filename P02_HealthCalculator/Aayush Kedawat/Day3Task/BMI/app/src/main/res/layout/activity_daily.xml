@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyActivity"
+    android:background="@color/colorBG"
+    >
+    <ImageView
+        android:id="@+id/imagePaper"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/papernotes"/>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_below="@id/imagePaper"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagePaper"
+
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:text="Enter your diet information"/>
+       <Spinner
+           android:id="@+id/spFood"
+           android:layout_marginTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_marginStart="20dp"
+           android:layout_marginEnd="20dp"
+           android:entries="@array/food_group_items"
+           android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edtInfo"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Enter Information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/backlayer"
+        android:text="Submit"
+
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>
