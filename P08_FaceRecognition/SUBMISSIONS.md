@@ -1,4 +1,4 @@
-## Mentees Completion of Tasks
+## They did it!
 1) Harsh Patel 
 2) Shubham Chhimpa
 3) Dibyendu Maji
