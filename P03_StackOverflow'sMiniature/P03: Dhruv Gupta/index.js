@@ -2,6 +2,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 var User = require("./models/User");
+var Question = require("./models/Question");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var db = require("./mysetup/myurl").myurl;
@@ -38,9 +39,13 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// PUBLIC ROUTE FOR SHOWING ALL QUESTIONS
 app.get("/", (req, res) => {
-  res.status(200).send(`Hi Welcome to the Login and Signup API`);
-});
+    Question.find()
+      .sort({ date: "desc" })
+      .then(questions => res.json(questions))
+      .catch(err => res.json({ noquestions: "NO questions to display" }));
+  });
 
 
 //AUTH ROUTES
@@ -72,7 +77,33 @@ app.post("/login", passport.authenticate("local",
     }), function(req,res){
 });
 
+// app.get("/testing",isLoggedIn,function(req,res){
+//     res.send("Testing Page!!");
+//     console.log("It worked!!");
+// });
 
+// PRIVATE ROUTE FOR SUBMITTING QUESTIONS
+app.post("/", isLoggedIn, (req, res) => {
+      const newQuestion = new Question({
+        textone: req.body.textone,
+        texttwo: req.body.texttwo,
+        user: req.user.id,
+        name: req.body.name
+      });
+      newQuestion
+        .save()
+        .then(question => res.json(question + "hi"))
+        .catch(err => console.log("Unable to push question to database " + err));
+    }
+  );
+
+// MIDDLEWARE
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
