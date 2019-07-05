@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyparser = require("body-parser");
 const passport = require("passport");
 const User = require("./models/User");
+const Question = require("./models/Question");
 const db = require("./mysetup/myurl").myurl;
 const bcrypt = require("bcrypt");
 const jsonwt = require("jsonwebtoken");
@@ -93,6 +94,52 @@ app.get(
     });
   }
 );
+//get(public route) route to get all the Questions.
+app.get("/api/questions", (req, res) => {
+  Question.find()
+    .sort({ date: "desc" })
+    .then(questions => res.json(questions))
+    .catch(err => res.json({ noquestions: "No Questions" }));
+});
+
+//route(private route) to post the Question.
+app.post("/api/questions", passport.authenticate("jwt", { session: false }), (req, res) => {
+  const newQuestion = new Question({
+    text: req.body.text,
+    user: req.user.id,
+    name: req.body.name
+
+  });
+  newQuestion
+    .save()
+    .then(question => res.json(question))
+    .catch(err => console.log("unable to push question"));
+});
+
+//private route to post the Answer only for the existing Questions.
+app.post("/api/questions/answers/:id", passport.authenticate("jwt", { session: false }), (req, res) => {
+  Question.findById(req.params.id)
+    .then(question => {
+      const newAnswer = {
+        user: req.user.id,
+        name: req.body.name,
+        text: req.body.text
+      };
+      question.answers.unshift(newAnswer);
+      question
+        .save()
+        .then(question => res.json(question))
+        .catch(err => console.log(err));
+    })
+    .catch(err => console.log(err));
+});
+
+//public route to get all the Answers 
+app.get("/api/questions/answers",passport.authenticate("jwt", { session: false }), (req, res) => {
+  res.json({
+    answer: req.body.answers
+  });
+})
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
