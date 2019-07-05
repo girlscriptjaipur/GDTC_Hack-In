@@ -5,6 +5,7 @@
 4) Shweta Shukla
 5) Naman Bhandari
 6) Prabhpreet Singh
+7) Simarpreet Singh
 
 
 
