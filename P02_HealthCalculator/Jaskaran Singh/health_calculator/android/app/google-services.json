@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "879945996591",
+    "firebase_url": "https://flutter-intro-setup-8b858.firebaseio.com",
+    "project_id": "flutter-intro-setup-8b858",
+    "storage_bucket": "flutter-intro-setup-8b858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879945996591:android:a3ddc63fcd402541",
+        "android_client_info": {
+          "package_name": "com.example.analytics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879945996591-h3fg5g0g0c04a0dsi24tc1ohe2askl42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1xEL1eNbTMYr56lWEuN7DuPDe0Xx3WoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879945996591-h3fg5g0g0c04a0dsi24tc1ohe2askl42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879945996591:android:345f2e2f0067e132",
+        "android_client_info": {
+          "package_name": "com.example.firebase_setup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879945996591-m109ghv62sbku8pfd5rr6h93imh3d6oo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase_setup",
+            "certificate_hash": "ca0e931425e9f29ab36e1373a392542373a181c2"
+          }
+        },
+        {
+          "client_id": "879945996591-h3fg5g0g0c04a0dsi24tc1ohe2askl42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1xEL1eNbTMYr56lWEuN7DuPDe0Xx3WoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879945996591-h3fg5g0g0c04a0dsi24tc1ohe2askl42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879945996591:android:d5457f03a2cd9998",
+        "android_client_info": {
+          "package_name": "com.example.health_calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879945996591-h3fg5g0g0c04a0dsi24tc1ohe2askl42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1xEL1eNbTMYr56lWEuN7DuPDe0Xx3WoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879945996591-h3fg5g0g0c04a0dsi24tc1ohe2askl42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
