@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,10 +21,11 @@ public class BMIActivity extends AppCompatActivity {
     double find_ans=0.0;
     double find_weight,find_height,find_bfp,find_age;
     RadioGroup bmi_radiogroup;
-    RadioButton bmi_radiobutton;
+    RadioButton male,female;
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         finish();
     }
 
@@ -31,7 +33,7 @@ public class BMIActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choosing);
+        setContentView(R.layout.activity_bmi);
         bmi_weight= findViewById(R.id.et_bmi_weight);
         bmi_height= findViewById(R.id.et_bmi_height);
         bmi_cal= findViewById(R.id.btn_bmi_cal);
@@ -40,6 +42,21 @@ public class BMIActivity extends AppCompatActivity {
         bmi_radiogroup= findViewById(R.id.rgroup_bmi_radiogroup);
         bmi_gender= findViewById(R.id.tv_bmi_gender);
         bmi_age= findViewById(R.id.et_bmi_age);
+        male= findViewById(R.id.rbtn_bmi_male);
+        female= findViewById(R.id.rbtn_bmi_female);
+
+        male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                no = 2;
+            }
+        });
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                no = 1;
+            }
+        });
 
 
 
@@ -66,14 +83,13 @@ public class BMIActivity extends AppCompatActivity {
                  }
                 else{
 
-
                     find_weight= Double.parseDouble(bmi_weight.getText().toString());
                      find_age= Double.parseDouble(bmi_age.getText().toString());
                     find_height= Double.parseDouble(bmi_height.getText().toString());
                     find_ans= find_weight/(find_height*find_height);
 
                     //logic for bmi
-                    ans.setText(Double.toString((Double.parseDouble(String.format("0.2%f",find_ans))))+ " kg/m*m");
+                    ans.setText(Double.toString(find_ans) + "kg/m*m");
 
                     if(find_ans<16)
                         ((TextView)(findViewById(R.id.tv_print_stuff))).setText(R.string.severe_underweighgt);
@@ -113,7 +129,7 @@ public class BMIActivity extends AppCompatActivity {
 
                      }
 
-                     bfp.setText(Double.toString((Double.parseDouble(String.format("0.2%f",find_bfp))))+ " %");
+                     bfp.setText(Double.toString(find_bfp)+ " %");
 
                      //logic for bfp over
 
@@ -122,17 +138,7 @@ public class BMIActivity extends AppCompatActivity {
         });
 
 
-    }
-    public void Check_gender(View view) {
-        switch(view.getId()){
 
-            case R.id.rbtn_bmi_male:
-                no=2;
-                break;
-            case R.id.rbtn_bmi_female:
-                no=1;
-                break;
-
-        }
     }
+
 }

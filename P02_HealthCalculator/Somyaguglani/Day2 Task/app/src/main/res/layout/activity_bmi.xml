@@ -59,7 +59,7 @@
                 android:textSize="18sp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:hint="@string/m"
                 android:id="@+id/et_bmi_height"/>
 
@@ -84,7 +84,7 @@
                 android:textSize="18sp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:hint="@string/kg"
                 android:id="@+id/et_bmi_weight"/>
 
@@ -110,14 +110,14 @@
             android:text="@string/male"
             android:layout_marginStart="25dp"
             android:id="@+id/rbtn_bmi_male"
-            android:onClick="Check_bmi_gender"/>
+          />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
             android:layout_marginStart="25dp"
             android:id="@+id/rbtn_bmi_female"
-            android:onClick="Check_bmi_gender"/>
+            />
 
     </RadioGroup>
 
