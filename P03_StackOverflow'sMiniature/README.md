@@ -56,8 +56,11 @@ So till now a User Can Post a Answer after they login but anyone can read the an
 </ul>
 
 # Resources 
+
 For the help Go into this repo Star and fork 
-https://github.com/HrithikMittal/Minature-Stackoverflow-APIs/
+https://github.com/HrithikMittal/Minature-Stackoverflow-APIs/  <br>
+For Docs Please refer https://nodejs.org/api/http.html <br>
+and for mongoDB refer this	https://www.mongodb.com/
 
 # Guidance
 
