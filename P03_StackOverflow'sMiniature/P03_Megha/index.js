@@ -30,7 +30,7 @@ app.use(passport.initialize());
 require("./strategies/jsonwtStrategy")(passport);
 
 app.get("/", (req, res) => {
-  res.status(200).send(`Hi Welcome to the Login and Signup API`);
+  res.json({ message: "pong" });
 });
 
 app.post("/api/auth/register", async (req, res) => {
@@ -88,58 +88,119 @@ app.get(
   "/api/auth/profile",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    res.json({
-      id: req.user.id,
-      email: req.user.email
-    });
+    User.findById(req.user.id)
+      .lean()
+      .then(user => {
+        delete user.password;
+        res.json(user);
+      });
   }
 );
 //get(public route) route to get all the Questions.
-app.get("/api/questions", (req, res) => {
-  Question.find()
-    .sort({ date: "desc" })
-    .then(questions => res.json(questions))
-    .catch(err => res.json({ noquestions: "No Questions" }));
-});
+app.get(
+  "/api/questions",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Question.find()
+      .sort({ date: "desc" })
+      .lean()
+      .then(questions =>
+        res.json(
+          questions.map(q => {
+            const question = { ...q };
+            delete question.answers;
+            return question;
+          })
+        )
+      )
+      .catch(err => res.json({ noquestions: "No Questions" }));
+  }
+);
 
 //route(private route) to post the Question.
-app.post("/api/questions", passport.authenticate("jwt", { session: false }), (req, res) => {
-  const newQuestion = new Question({
-    text: req.body.text,
-    user: req.user.id,
-    name: req.body.name
+app.post(
+  "/api/questions",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    const newQuestion = new Question({
+      text: req.body.text,
+      user: req.user.id,
+      name: req.body.name
+    });
+    newQuestion
+      .save()
+      .then(question => res.json(question))
+      .catch(err => console.log("unable to push question"));
+  }
+);
 
-  });
-  newQuestion
-    .save()
-    .then(question => res.json(question))
-    .catch(err => console.log("unable to push question"));
-});
+app.get(
+  "/api/questions/:id",
+  passport.authenticate("jwt", { session: false }),
+  (req, res, next) => {
+    Question.findById(req.params["id"])
+      .lean()
+      .then(question => {
+        delete question.answers;
+        res.json(question);
+      })
+      .catch(err => next(err));
+  }
+);
+
+//public route to get all the Answers
+app.get(
+  "/api/questions/:id/answers",
+  passport.authenticate("jwt", { session: false }),
+  (req, res, next) => {
+    Question.findById(req.params["id"])
+      .lean()
+      .then(question => {
+        res.json(question.answers);
+      })
+      .catch(err => next(err));
+  }
+);
 
 //private route to post the Answer only for the existing Questions.
-app.post("/api/questions/answers/:id", passport.authenticate("jwt", { session: false }), (req, res) => {
+app.post(
+  "/api/questions/:id/answers",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Question.findById(req.params.id)
+      .then(question => {
+        const newAnswer = {
+          user: req.user.id,
+          name: req.body.name,
+          text: req.body.text
+        };
+        question.answers.unshift(newAnswer);
+        return question.save();
+      })
+      .then(question => res.json(question))
+      .catch(err => console.log(err));
+  }
+);
+
+app.post("/api/questions/:id/answers/:answer_id/upvote", (req, res, next) => {
+  const answerId = parseInt(req.params["answer_id"]);
   Question.findById(req.params.id)
     .then(question => {
-      const newAnswer = {
-        user: req.user.id,
-        name: req.body.name,
-        text: req.body.text
-      };
-      question.answers.unshift(newAnswer);
-      question
-        .save()
-        .then(question => res.json(question))
-        .catch(err => console.log(err));
+      console.log(question);
+      question.answers[answerId].votes++;
+      return question.save();
     })
-    .catch(err => console.log(err));
+    .then(question => res.json(question.answers[answerId]))
+    .catch(next);
 });
 
-//public route to get all the Answers 
-app.get("/api/questions/answers",passport.authenticate("jwt", { session: false }), (req, res) => {
+app.use((error, req, res, next) => {
+  console.log("Server encountered error", error);
   res.json({
-    answer: req.body.answers
+    error,
+    message: error.message || error || "Not found"
   });
-})
+});
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
