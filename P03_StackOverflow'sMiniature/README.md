@@ -47,6 +47,14 @@ So till now a User can Post a Question after they login into the System.So for f
    <li><i>It is just advice to make the array-String in Model/Schema if you want to have more than one value for same entity. For example we want to save many answers of only one question.</i></li>
 </ul>
 
+## Day5
+So till now a User Can Post a Answer after they login but anyone can read the anser and question without the login. So for the further Development Please follow these Steps:
+<ul>
+   <li>Make a route to increase upvote array and this is an private route.</li>
+   <li>Also Make an Seperate route for the profile section where you take all the information and this is a private too.</li>
+   <li><i>Again it is just advice to make the array-String in Model/Schema if you want to have more than one value for same entity. For example we want to save many upvote of only one question.</i></li>
+</ul>
+
 # Resources 
 For the help Go into this repo Star and fork 
 https://github.com/HrithikMittal/Minature-Stackoverflow-APIs/
