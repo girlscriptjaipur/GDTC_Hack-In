@@ -1,12 +1,15 @@
 var express = require('express');
 var route = express.Router();
 var key = require("../setup/myurl");
-var User = require("../modals/User");
 const jsonwt = require("jsonwebtoken");
 var passport = require("passport");
 require("../strategies/jsonwtStrategy") (passport);
 var bcrypt = require("bcrypt");
 var saltRounds = 10;
+
+//Models
+var User = require("../models/User");
+var Profile = require("../models/Profile");
 
 route.get('/', (req, res) => {
 	res.status(200).send(`Welcome to login and signup API`);
@@ -91,7 +94,9 @@ route.get(
 		console.log(req);
 		res.json({
 			id: req.user.id,
-			username: req.user.username
+			username: req.user.username,
+			email: req.user.email,
+      		profilepic: req.user.profilepic
 		});
 	}
 	);

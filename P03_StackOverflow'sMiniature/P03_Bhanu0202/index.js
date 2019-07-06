@@ -6,7 +6,9 @@ var key = require("./setup/myurl");
 const jsonwt = require("jsonwebtoken");
 var passport = require("passport");
 require("./strategies/jsonwtStrategy") (passport);
-const auth = require("./route/User");
+const user = require("./route/User");
+const ques = require("./route/Ques");
+//const profile = require("./route/Profile");
 
 var app = express();
 
@@ -26,11 +28,9 @@ mongoose
 		console.log("error is ", err.message);
 	});
 
-// 	app.get("/", (req, res) => {
-//   res.send("Hey there Big stack");
-// });
-
-app.use("", auth);
+app.use("/api/user", user);
+//app.use("/api/profile", profile);
+app.use("/api/questions", ques);
 
 app.listen(port, hostname, () => {
 	console.log(`Server is running on ${hostname}:${port}`);
