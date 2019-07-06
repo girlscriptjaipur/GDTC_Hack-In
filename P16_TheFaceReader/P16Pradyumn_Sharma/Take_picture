@@ -31,7 +31,7 @@ cv2.imshow('live1',img1)
 # waitkey is use for holding the image for a time
 
 # if we passs "zero"   its wait for cursor action
-
+cv2.destroyAllWindows()
 cv2.waitKey(5000)    
 
 # its stop the camera 
