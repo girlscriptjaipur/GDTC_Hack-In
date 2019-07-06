@@ -4,9 +4,9 @@
 ### Description
  The project implements WebScraping from three websites ( AndroidPolice.com, Toptal.com and Careers360.com )
  <ul>
- <li>AndroidPolice - Top Tech News
- <li>Toptal - Developers Blog Headlines
- <li>Careers360 - Top Engineering Colleges
+ <li><a href="https://www.androidpolice.com/">AndroidPolice</a> - Top Tech News
+  <li><a href="https://www.toptal.com/developers/blog">Toptal</a> - Developers Blog Headlines
+ <li><a href="https://engineering.careers360.com/colleges/ranking">Careers360</a> - Top Engineering Colleges
   </ul>
  
 ## Screenshots
