@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Content Aggregator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Content Aggregator</h1>
+  <div class='content'>
+    {% for key, value in content.items() %}
+    <div class='data'>
+      <h2>{{key}}</h2>
+        {% for i in range(0,10) if  i<value|length %}
+          <a class='contenta' target="_blank" href={{value[i][2]}}>{{value[i][1]}}</a><br>
+        {% endfor %}
+      <a class='readmore' href="{{url_for('.readmore',source=content[key][0][0])}}">Read More..</a>
+    </div>
+    {% endfor %}
+  </div>
+  <center>
+<div class="college">
+  <h2>Top Colleges of India</h2>
+    <a class="button" href="{{url_for('.college')}}">Visit Here!!</a>
+</center>
+
+
+</body>
+</html>
