@@ -52,5 +52,25 @@ route.post("/answer:id", passport.authenticate("jwt", { session: false }),
 	      .catch(err => console.log("Error is " + err));
 });
 
+route.post("/upvote:id", passport.authenticate("jwt", { session: false }),
+	(req, res) => {
+		Ques.findById(req.params.id)
+	      .then(ques => {
+	      	if (
+              ques.upvotes.filter(
+                upvote => upvote.user.toString() === req.user.id.toString()
+              ).length > 0
+	            ) {
+	              return res.status(400).json({ noupvote: "User already upvoted" });
+	            }
+	            ques.upvotes.unshift({ user: req.user.id });
+	            ques
+	              .save()
+	              .then(ques => res.json(ques))
+	              .catch(err => console.log("Error is " + err));
+	          })
+	          .catch(err => console.log("Error is " + err));
+	});
+
 
 module.exports = route;

@@ -8,7 +8,7 @@ var passport = require("passport");
 require("./strategies/jsonwtStrategy") (passport);
 const user = require("./route/User");
 const ques = require("./route/Ques");
-//const profile = require("./route/Profile");
+const profile = require("./route/Profile");
 
 var app = express();
 
@@ -29,7 +29,7 @@ mongoose
 	});
 
 app.use("/api/user", user);
-//app.use("/api/profile", profile);
+app.use("/api/profile", profile);
 app.use("/api/questions", ques);
 
 app.listen(port, hostname, () => {
