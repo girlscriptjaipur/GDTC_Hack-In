@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 var User = require("./models/User");
 var Question = require("./models/Question");
+var Profile = require("./models/Profile");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var db = require("./mysetup/myurl").myurl;
@@ -38,6 +39,73 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+//========================
+// PROFILE ROUTES
+//========================
+
+// PRIVATE ROUTE FOR SHOWING USER PERSONAL INFO
+app.get("/profile", isLoggedIn, (req, res) => {
+      Profile.findOne({ user: req.user.id })
+        .then(profile => {
+          if (!profile) {
+            return res.status(404).json({ profilenotfound: "No profile Found" });
+          }
+          res.json(profile);
+        })
+        .catch(err => console.log("got some error in profile " + err));
+    }
+);
+
+// PRIVATE ROUTE FOR TAKING USER INFO
+app.post("/profile", isLoggedIn, (req, res) => {
+      const profileValues = {};
+      profileValues.user = req.user.id;
+      if (req.body.username) profileValues.username = req.body.username;
+      if (req.body.website) profileValues.website = req.body.website;
+      if (req.body.country) profileValues.country = req.body.country;
+      if (req.body.portfolio) profileValues.portfolio = req.body.portfolio;
+      if (typeof req.body.languages !== undefined) {
+        profileValues.languages = req.body.languages.split(",");
+      }
+      //get social links
+      profileValues.social = {};
+  
+      if (req.body.youtube) profileValues.social.youtube = req.body.youtube;
+      if (req.body.facebook) profileValues.social.facebook = req.body.facebook;
+      if (req.body.instagram) profileValues.social.instagram = req.body.instagram;
+  
+      //Do database stuff
+      Profile.findOne({ user: req.user.id })
+        .then(profile => {
+          if (profile) {
+            Profile.findOneAndUpdate(
+              { user: req.user.id },
+              { $set: profileValues },
+              { new: true }
+            )
+              .then(profile => res.json(profile))
+              .catch(err => console.log("problem in update" + err));
+          } else {
+            Profile.findOne({ username: profileValues.username })
+              .then(profile => {
+                //Username already exists
+                if (profile) {
+                  res.status(400).json({ username: "Username already exists" });
+                }
+                //save user
+                new Profile(profileValues)
+                  .save()
+                  .then(profile => res.json(profile))
+                  .catch(err => console.log(err));
+              })
+              .catch(err => console.log(err));
+          }
+        })
+        .catch(err => console.log("Problem in fetching profile" + err));
+    }
+);
+//=======================================================
 
 // PUBLIC ROUTE FOR SHOWING ALL QUESTIONS
 app.get("/", (req, res) => {
@@ -77,10 +145,10 @@ app.post("/login", passport.authenticate("local",
     }), function(req,res){
 });
 
-// app.get("/testing",isLoggedIn,function(req,res){
-//     res.send("Testing Page!!");
-//     console.log("It worked!!");
-// });
+app.get("/testing",isLoggedIn,function(req,res){
+    res.send("Testing Page!!");
+    console.log("It worked!!");
+});
 
 // PRIVATE ROUTE FOR SUBMITTING QUESTIONS
 app.post("/", isLoggedIn, (req, res) => {
@@ -111,6 +179,31 @@ app.post("/answers/:id", isLoggedIn, (req, res) => {
           question
             .save()
             .then(question => res.json(question))
+            .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
+    }
+);
+
+// PRIVATE ROUTE FOR UPVOTING
+app.post("/upvote/:id", isLoggedIn, (req, res) => {
+      Profile.findOne({ user: req.user.id })
+        .then(profile => {
+          Question.findById(req.params.id)
+            .then(question => {
+              if (
+                question.upvotes.filter(
+                  upvote => upvote.user.toString() === req.user.id.toString()
+                ).length > 0
+              ) {
+                return res.status(400).json({ noupvote: "User already upvoted" });
+              }
+              question.upvotes.unshift({ user: req.user.id });
+              question
+                .save()
+                .then(question => res.json(question))
+                .catch(err => console.log(err));
+            })
             .catch(err => console.log(err));
         })
         .catch(err => console.log(err));
