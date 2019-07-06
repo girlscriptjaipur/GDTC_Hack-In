@@ -5,8 +5,8 @@ options =["rock", "paper", "scissors","rock", "paper", "scissors","rock", "paper
 print("Welcome to Rock Paper Scissors Game")
 
 play = "yes"
-coscore=0
-myscore=0
+coscore = 0
+myscore = 0
 while play == "yes":
     comove= random.choice(options)
     mymove = input("What will you choose? rock, paper or scissors: ")
