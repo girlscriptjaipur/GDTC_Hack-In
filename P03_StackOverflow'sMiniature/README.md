@@ -8,7 +8,7 @@ This is the Project of Minature StackOverflow API which is an API's collection w
 <li>Auhtentication and Role based Access to the StackHolders</li>
 </ul>
 
-#TECHNOLOGY STACK: 
+# TECHNOLOGY STACK: 
 <ul>
    <li>NodeJS </li>
 <li>ExpressJs</li>
