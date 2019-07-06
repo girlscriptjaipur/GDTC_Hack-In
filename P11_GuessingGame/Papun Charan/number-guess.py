@@ -28,7 +28,7 @@ def play():
 
 p = 1
 while(True):
-    if p==0:
+    if p == 0:
         break
     else:
         p = play()
