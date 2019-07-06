@@ -4,8 +4,17 @@ This is the Project of Minature StackOverflow API which is an API's collection w
 <li>Create a User</li>
 <li>Post a Question</li>
 <li>Post a Answer to the existing question</li>
-<li>Clap on the answer</li>
+<li>Clap on the answer(upvote)</li>
 <li>Auhtentication and Role based Access to the StackHolders</li>
+</ul>
+
+#TECHNOLOGY STACK: 
+<ul>
+   <li>NodeJS </li>
+<li>ExpressJs</li>
+<li>MongoDB</li>
+<li>EJS/scripting language(optional for UI)</li>
+<li>Heroku</li>
 </ul>
 
 # Tasks to be Done
