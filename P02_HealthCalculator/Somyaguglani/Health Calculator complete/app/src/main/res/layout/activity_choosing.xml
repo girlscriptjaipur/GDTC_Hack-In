@@ -14,10 +14,19 @@
             android:layout_width="138dp"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="40dp"
             android:src="@drawable/bmr_pic"
             android:id="@+id/imbtn_bmr"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="BMR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/choosing_tv_bmr"/>
 
         <ImageButton
             android:id="@+id/imbtn_bmi"
@@ -25,15 +34,34 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:src="@drawable/bmi_pic" />
+            android:src="@drawable/bmi_pic"
+            />
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="BMI"
+        android:textSize="18sp"
+        android:textStyle="bold"
+           android:id="@+id/choosing_tv_bmi"/>
 
         <ImageButton
             android:id="@+id/imbtn_bmi_takenotes"
             android:layout_width="137dp"
-            android:layout_height="135dp"
+            android:layout_height="119dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:src="@drawable/note_taking" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="TAKE NOTES"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/choosing_tv_takenotes"/>
 
 
     </LinearLayout>
