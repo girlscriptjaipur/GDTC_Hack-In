@@ -16,4 +16,6 @@
     <string name="severe_underweighgt">Severe Underweight</string>
     <string name="moderate_weight">Moderate weight</string>
     <string name="body_fat_percentage_is">BODY FAT PERCENTAGE IS</string>
+    <string name="add_note">add_note</string>
+    <string name="add">Add note</string>
 </resources>

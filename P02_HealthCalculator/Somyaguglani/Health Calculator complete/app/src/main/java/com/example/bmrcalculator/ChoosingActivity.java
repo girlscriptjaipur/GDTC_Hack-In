@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class ChoosingActivity extends AppCompatActivity {
 
-    ImageButton bmi,bmr;
+    ImageButton bmi,bmr,takenotes;
 
 
     @Override
@@ -42,6 +42,7 @@ public class ChoosingActivity extends AppCompatActivity {
 
         bmi= findViewById(R.id.imbtn_bmi);
         bmr = findViewById(R.id.imbtn_bmr);
+        takenotes = findViewById(R.id.imbtn_bmi_takenotes);
 
         bmi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,14 @@ public class ChoosingActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(ChoosingActivity.this,MainActivity.class);
                 startActivity(i);
+            }
+        });
+        takenotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ChoosingActivity.this,NoteStartActivity.class);
+                startActivity(i);
+
             }
         });
 
