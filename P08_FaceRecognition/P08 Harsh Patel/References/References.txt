@@ -1,0 +1,20 @@
+References for Project:
+
+1. https://www.pyimagesearch.com/2018/07/30/opencv-object-tracking/ 
+2. https://realpython.com/face-detection-in-python-using-a-webcam/ 
+3. https://www.datacamp.com/community/tutorials/face-detection
+python-opencv 
+4. https://www.pyimagesearch.com/2018/07/19/opencv
+tutorial-a-guide-to-learn-opencv/ 
+5. https://opencv-python
+tutroals.readthedocs.io/en/latest/py_tutorials/py
+_imgproc/py_table_of_contents_imgproc/py_table_of
+_contents_imgproc.html 
+6. https://pythonprogramming.net/haar-cascade-face
+eye-detection-python-opencv-tutorial/ 
+7. https://ieeexplore.ieee.org/abstract/document/826
+5863 
+8. https://www.learnopencv.com/multitracker-multiple
+object-tracking-using-opencv-c-python/ 
+9. https://www.pyimagesearch.com/2018/09/24/opencv-face
+recognition/
