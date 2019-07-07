@@ -1,11 +1,11 @@
 ## They did it!
-1) Harsh Patel 
-2) Shubham Chhimpa
-3) Dibyendu Maji
-4) Shweta Shukla
-5) Naman Bhandari
-6) Prabhpreet Singh
-7) Simarpreet Singh
+1) Harsh Patel ( harshitjain1309@gmail.com )
+2) Shubham Chhimpa ( chhimpa.shubh04@gmail.com )
+3) Dibyendu Maji ( dibyendumaji415@gmail.com )
+4) Shweta Shukla ( krianu20214@gmail.com )
+5) Naman Bhandari ( namanbhandari16@gmail.com )
+6) Prabhpreet Singh ( psinghoff332@gmail.com )
+7) Simarpreet Singh ( simarpreetsingh.019@gmail.com )
 
 
 
