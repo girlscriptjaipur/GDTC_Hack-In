@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content Master</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1><a href="/">Content Master</a></h1>
+	<div class='read content'>
+		{% for key, value in content.items() %}
+		<div class='read data'>
+			<h2>{{key}}</h2>
+				{% for i in value %}
+					<a class='contenta' target="_blank" href={{i[2]}}>{{i[1]}}</a><br>
+				{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+
+</body>
+</html>
