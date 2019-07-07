@@ -80,7 +80,7 @@ public class NoteStartActivity extends AppCompatActivity {
                 final int item_to_delete = i;
                 new AlertDialog.Builder( NoteStartActivity.this)
                         .setCancelable(false)
-                        .setTitle("Are yiou sure?")
+                        .setTitle("Are you sure?")
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setMessage("Do you want to delete this note?")
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
