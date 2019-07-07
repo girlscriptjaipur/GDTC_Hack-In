@@ -1,0 +1,30 @@
+Scientific Calculator:
+
+AIM OF THE PROJECT
+Aim is to make a simple scientific calculator application for Android and publish it to playstore. 
+
+DETAILS OF THE PROJECT
+To make a simple scientific calculator, you will understand the concepts of 
+- Basics of UI elements and android Java
+- Importance of callback methods
+- Understanding of guidelines to follow before publishing app to playstore.
+
+TECHNOLOGY STACK
+- Android
+- Java
+- XML
+
+ROAD MAP
+- Basic understanding of app development (Android and XML) - 2 Days
+- Implementation with mathematical logic - 2 Days
+-  Experimenting with several UI elements to make your app ready for playstore - 1 Day
+
+RESOURCES
+To understand the basics of 
+XML:
+https://drive.google.com/file/d/0B5XIkMkayHgRMVljUVIyZzNmQUU/view
+https://labs.udacity.com/android-visualizer/#/android/textview
+
+Android:
+https://developer.android.com/docs
+
