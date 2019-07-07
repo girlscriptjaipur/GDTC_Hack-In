@@ -1,5 +1,5 @@
 ## They did it!
-1) Harsh Patel ( harshitjain1309@gmail.com )
+1) Harsh Patel (  harshackathon@gmail.com )
 2) Shubham Chhimpa ( chhimpa.shubh04@gmail.com )
 3) Dibyendu Maji ( dibyendumaji415@gmail.com )
 4) Shweta Shukla ( krianu20214@gmail.com )
