@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content Master</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Content Master</h1>
+	<div class='content'>
+		{% for key, value in content.items() %}
+		<div class='data'>
+			<h2>{{key}}</h2>
+				{% for i in range(0,10) if  i<value|length %}
+					<a class='contenta' target="_blank" href={{value[i][1]}}>{{value[i][2]}}</a><br>
+				{% endfor %}
+			<a class='readmore' href="{{url_for('.readmore',source=content[key][0][0])}}">Read More..</a>
+		</div>
+		{% endfor %}
+	</div>
+</body>
+</html>
