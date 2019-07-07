@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Health Calculator</string>
+    <string name="age">Age</string>
+    <string name="years">Years</string>
+    <string name="height">Height</string>
+    <string name="cm">Cm</string>
+    <string name="weight">Weight</string>
+    <string name="kg">Kg</string>
+    <string name="male">Male</string>
+    <string name="gender">Gender</string>
+    <string name="your_bmr_is">YOUR BMR IS</string>
+    <string name="bmi_slogan">YOUR BMI IS </string>
+    <string name="bmr">BMR</string>
+    <string name="bmi">BMI</string>
+    <string name="m">m</string>
+    <string name="severe_underweighgt">Severe Underweight</string>
+    <string name="moderate_weight">Moderate weight</string>
+    <string name="body_fat_percentage_is">BODY FAT PERCENTAGE IS</string>
+    <string name="add_note">add_note</string>
+    <string name="add">Add note</string>
+</resources>

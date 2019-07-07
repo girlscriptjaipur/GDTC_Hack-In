@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress AndroidDomInspection -->
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/healthy_pic"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"/>
+            <EditText
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/years"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:id="@+id/et_bmi_age"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"/>
+            <EditText
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:hint="@string/m"
+                android:id="@+id/et_bmi_height"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textSize="18sp"
+
+                android:layout_marginStart="20dp"/>
+            <EditText
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:hint="@string/kg"
+                android:id="@+id/et_bmi_weight"/>
+
+        </LinearLayout>
+
+    <RadioGroup
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgroup_bmi_radiogroup">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="18sp"
+            android:layout_marginStart="25dp"
+            android:id="@+id/tv_bmi_gender"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:layout_marginStart="25dp"
+            android:id="@+id/rbtn_bmi_male"
+          />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginStart="25dp"
+            android:id="@+id/rbtn_bmi_female"
+            />
+
+    </RadioGroup>
+
+    <Button
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calculate"
+            android:textStyle="bold"
+            android:background="@drawable/btn_calculate_background"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/btn_bmi_cal"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi_slogan"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:id="@+id/tv_bmi_ans"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/tv_print_stuff"/>
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8">
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/body_fat_percentage_is"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:id="@+id/tv_bmi_bodyfat"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
