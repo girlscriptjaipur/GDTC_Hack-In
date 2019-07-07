@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3D9740</color>
+    <color name="colorPrimaryDark">#7586EE</color>
+    <color name="colorAccent">#495FDF</color>
+    <color name="view_backg_color">#c7c7C7</color>
+
+    <!--  colors for dark theme -->
+</resources>
