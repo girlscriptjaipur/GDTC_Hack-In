@@ -47,7 +47,7 @@ public class NoteStartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_note_start);
         listView= findViewById(R.id.lv_listview);//use ..toi save space we don't want duplicates //new concept learn
         SharedPreferences sharedPreferences= getApplicationContext().getSharedPreferences("com.example.bmrcalculator", Context.MODE_PRIVATE);
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("notes",null);
