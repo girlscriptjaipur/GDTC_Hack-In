@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BMR</string>
+    <string name="age_prompt">Choose Age Group</string>
+    <string-array name="age_group_items">
+        <item> 10 - 17 Years</item>
+        <item> 18 - 29 Years</item>
+        <item> 30 - 59 Years</item>
+
+    </string-array>
+
+    <string name="info">SEE = Standard error of estimation
+The SEE value means the calculated BMR could be this number of calories out, in other words either
+too many or too little. As an example, if you are very muscular and possess more lean weight than an
+average person of the same height and weight, then you may have to add the SEE value to the BMR
+calculated.
+</string>
+    <string name="info_bfp"></string>
+    <string name="BMRtext">Your BMR is </string>
+    <string-array name="food_group_items">
+        <item> Breakfast</item>
+        <item> Lunch</item>
+        <item>Snacks</item>
+        <item> Dinner</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:background="@color/colorBG"
+    android:layout_marginBottom="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Standard Values"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Women:"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*20-40 yrs old: Underfat: under 21 percent, Healthy: 21-33 percent, Overweight: 33-39 percent, Obese: Over 39 percent"/>
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*41-60 yrs old: Underfat: under 23 percent, Healthy: 23-35 percent, Overweight : 35-40 percent Obese: over 40 percent"/>
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*61-79 yrs old: Underfat: under 24 percent, Healthy: 24-36 percent, Overweight: 36-42 percent, Obese: over 42 percent"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Men:"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*20-40 yrs old: Underfat: under 8 percent, Healthy: 8-19 percent, Overweight: 19-25 percent, Obese: over 25 percent"/>
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*41-60 yrs old: Underfat: under 11 percent, Healthy: 11-22 percent, Overweight: 22-27 percent, Obese: over 27 percent"/>
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*61-79 yrs old: Underfat: under 13 percent, Healthy: 13-25 percent, Overweight: 25-30 percent, Obese: over 30 percent"/>
+
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BFP Calculator"
+        android:layout_marginTop="50dp"
+        android:gravity="bottom"/>
+</LinearLayout>
