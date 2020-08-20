@@ -10,7 +10,7 @@
   "author": "Megha Priyadarshini <meghapriyadarshini68@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.6.2",
     "passport": "^0.4.0",
