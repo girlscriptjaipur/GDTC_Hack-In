@@ -57,7 +57,7 @@ netifaces==0.10.4
 numpy==1.15.3
 olefile==0.46
 pbr==5.1.0
-Pillow==5.4.1
+Pillow==8.1.1
 post==1.0.2
 protobuf==3.6.1
 public==2.0.1
