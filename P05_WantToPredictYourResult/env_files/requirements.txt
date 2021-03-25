@@ -75,7 +75,7 @@ python-dateutil==2.7.3
 python-forex-quotes==1.0
 PyVirtualDisplay==0.2.1
 pyxdg==0.25
-PyYAML==3.13
+PyYAML==5.4
 query-string==1.0.2
 regex==2019.2.7
 repoze.lru==0.7
