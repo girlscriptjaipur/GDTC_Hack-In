@@ -59,7 +59,7 @@ olefile==0.46
 pbr==5.1.0
 Pillow==5.4.1
 post==1.0.2
-protobuf==3.6.1
+protobuf==3.18.3
 public==2.0.1
 PyAudio==0.2.11
 pycairo==1.16.2
