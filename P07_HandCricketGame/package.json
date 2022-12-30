@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "execa": "^2.0.1",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "prettier-standard": "^9.1.1"
   }
 }
